@@ -22,301 +22,114 @@
     --bg-card: #ffffff;
   }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    font-size: 16px;
-  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
 
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(250,250,248,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
-    padding: 0 2rem;
-  }
-  .nav-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
-  }
-  .nav-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 17px;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    font-size: 13px;
-    color: var(--text-muted);
-    text-decoration: none;
-    letter-spacing: 0.4px;
-    transition: color 0.2s;
-  }
+  nav { position: sticky; top: 0; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 100; padding: 0 2rem; }
+  .nav-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+  .nav-name { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--text); text-decoration: none; }
+  .nav-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+  .nav-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; letter-spacing: 0.4px; transition: color 0.2s; }
   .nav-links a:hover { color: var(--seafoam-dark); }
 
-  .hero {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 5rem 2rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 4rem;
-    align-items: start;
-  }
-  .hero-tag {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--seafoam-dark);
-    background: var(--seafoam-light);
-    padding: 5px 12px;
-    border-radius: 100px;
-    margin-bottom: 1.5rem;
-  }
-  .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 52px;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    color: var(--text);
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--seafoam);
-  }
-  .hero-bio {
-    font-size: 15px;
-    line-height: 1.8;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    font-weight: 300;
-  }
+  .hero { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 4rem; display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+  .hero-tag { display: inline-block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--seafoam-dark); background: var(--seafoam-light); padding: 5px 12px; border-radius: 100px; margin-bottom: 1.5rem; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1.1; letter-spacing: -1.5px; font-weight: 400; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--seafoam); }
+  .hero-bio { font-size: 15px; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem; font-weight: 300; }
   .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
-  .hero-links a {
-    font-size: 12px;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    padding: 9px 18px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: all 0.2s;
-    font-weight: 500;
-  }
-  .btn-primary {
-    background: var(--seafoam);
-    color: white;
-    border: 1.5px solid var(--seafoam);
-  }
+  .hero-links a { font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; padding: 9px 18px; border-radius: 100px; text-decoration: none; transition: all 0.2s; font-weight: 500; }
+  .btn-primary { background: var(--seafoam); color: white; border: 1.5px solid var(--seafoam); }
   .btn-primary:hover { background: var(--seafoam-dark); border-color: var(--seafoam-dark); }
-  .btn-secondary {
-    background: transparent;
-    color: var(--text);
-    border: 1.5px solid var(--border);
-  }
+  .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
   .btn-secondary:hover { border-color: var(--seafoam-mid); color: var(--seafoam-dark); }
 
   .hero-right { display: flex; flex-direction: column; gap: 16px; padding-top: 0.5rem; }
-  .headshot-wrap {
-    width: 100%;
-    aspect-ratio: 4/5;
-    border-radius: 16px;
-    overflow: hidden;
-    background: var(--seafoam-light);
-    border: 1px solid var(--seafoam-mid);
-    position: relative;
-  }
-  .headshot-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-  }
-  .headshot-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--seafoam-dark);
-  }
+  .headshot-wrap { width: 100%; aspect-ratio: 4/5; border-radius: 16px; overflow: hidden; background: var(--seafoam-light); border: 1px solid var(--seafoam-mid); position: relative; }
+  .headshot-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .headshot-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--seafoam-dark); }
   .headshot-placeholder svg { opacity: 0.4; }
   .headshot-placeholder p { font-size: 12px; opacity: 0.6; }
 
   .badge-stack { display: flex; flex-direction: column; gap: 8px; }
-  .badge {
-    padding: 10px 14px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--bg-card);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  .badge { padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); display: flex; justify-content: space-between; align-items: center; }
   .badge .b-label { font-size: 11px; color: var(--text-light); letter-spacing: 0.5px; text-transform: uppercase; }
   .badge .b-value { font-size: 13px; font-weight: 500; color: var(--text); text-align: right; max-width: 180px; }
 
-  .divider {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    border-top: 1px solid var(--border);
-  }
+  .divider { max-width: 900px; margin: 0 auto; padding: 0 2rem; border-top: 1px solid var(--border); }
 
-  .section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3.5rem 2rem;
-  }
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 2rem;
-  }
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--seafoam-dark);
-    font-weight: 500;
-  }
+  .section { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 2rem; }
+  .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--seafoam-dark); font-weight: 500; }
   .section-line { flex: 1; height: 1px; background: var(--border); }
 
-  .research-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .research-card {
-    padding: 1.25rem 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--bg-card);
-    border-left: 3px solid var(--seafoam);
-    transition: box-shadow 0.2s;
-  }
+  .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .research-card { padding: 1.25rem 1.5rem; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-card); border-left: 3px solid var(--seafoam); transition: box-shadow 0.2s; }
   .research-card:hover { box-shadow: 0 4px 16px rgba(91,173,160,0.12); }
-  .research-card .r-title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .research-card .r-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.65;
-    font-weight: 300;
-  }
-  .research-card .r-tag {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 10px;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--seafoam-dark);
-    background: var(--seafoam-light);
-    padding: 3px 8px;
-    border-radius: 100px;
-  }
+  .research-card .r-title { font-size: 14px; font-weight: 500; line-height: 1.4; margin-bottom: 8px; }
+  .research-card .r-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+  .research-card .r-tag { display: inline-block; margin-top: 10px; font-size: 10px; letter-spacing: 0.8px; text-transform: uppercase; color: var(--seafoam-dark); background: var(--seafoam-light); padding: 3px 8px; border-radius: 100px; }
 
-  .awards-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-  }
-  .award-item {
-    padding: 1rem 1.25rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-  }
+  .interests-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+  .interest-tag { font-size: 13px; color: var(--seafoam-dark); background: var(--seafoam-light); border: 1px solid var(--seafoam-mid); padding: 6px 14px; border-radius: 100px; font-weight: 400; }
+
+  .methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .method-card { padding: 1.25rem 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+  .method-card .m-title { font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--text); }
+  .method-card .m-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+  .methods-note { margin-top: 1rem; font-size: 13px; color: var(--text-muted); font-weight: 300; line-height: 1.7; padding: 1rem 1.25rem; background: var(--seafoam-light); border-radius: 10px; border-left: 3px solid var(--seafoam); }
+
+  .edu-list { display: flex; flex-direction: column; gap: 1rem; }
+  .edu-item { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; padding: 1.25rem 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; align-items: start; }
+  .edu-year { font-size: 13px; color: var(--seafoam-dark); font-weight: 500; padding-top: 2px; }
+  .edu-degree { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
+  .edu-school { font-size: 13px; color: var(--text-muted); font-weight: 300; }
+  .edu-note { font-size: 12px; color: var(--text-light); margin-top: 4px; font-style: italic; }
+
+  .awards-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .award-item { padding: 1rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
   .award-item .a-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .award-item .a-org { font-size: 12px; color: var(--text-muted); font-weight: 300; }
   .award-item .a-year { font-size: 11px; color: var(--seafoam-dark); margin-top: 6px; font-weight: 500; }
 
+  .conf-list { display: flex; flex-direction: column; }
+  .conf-item { display: flex; justify-content: space-between; align-items: start; padding: 1rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
+  .conf-item:first-child { border-top: 1px solid var(--border); }
+  .conf-title { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
+  .conf-sub { font-size: 13px; color: var(--text-muted); font-weight: 300; }
+  .conf-tag { font-size: 11px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--seafoam-dark); background: var(--seafoam-light); padding: 4px 10px; border-radius: 100px; white-space: nowrap; margin-top: 2px; }
+
   .media-list { display: flex; flex-direction: column; }
-  .media-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .media-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border); }
   .media-item:first-child { border-top: 1px solid var(--border); }
   .mi-title { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
   .mi-sub { font-size: 13px; color: var(--text-muted); font-weight: 300; }
-  .mi-tag {
-    font-size: 11px;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: var(--seafoam-dark);
-    background: var(--seafoam-light);
-    padding: 4px 10px;
-    border-radius: 100px;
-    white-space: nowrap;
-    margin-left: 1rem;
-  }
+  .mi-tag { font-size: 11px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--seafoam-dark); background: var(--seafoam-light); padding: 4px 10px; border-radius: 100px; white-space: nowrap; margin-left: 1rem; }
 
-  .community-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .community-card {
-    padding: 1.25rem 1.5rem;
-    background: var(--seafoam-light);
-    border-radius: 12px;
-    border: 1px solid var(--seafoam-mid);
-  }
+  .community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .community-card { padding: 1.25rem 1.5rem; background: var(--seafoam-light); border-radius: 12px; border: 1px solid var(--seafoam-mid); }
   .community-card .c-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; color: var(--seafoam-dark); }
   .community-card .c-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
   .community-card .c-date { font-size: 11px; color: var(--seafoam); margin-top: 8px; font-weight: 500; }
 
-  footer {
-    background: var(--text);
-    color: rgba(255,255,255,0.6);
-    padding: 2.5rem 2rem;
-    margin-top: 2rem;
-  }
-  .footer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  footer .f-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 4px;
-  }
+  .consulting-intro { font-size: 15px; line-height: 1.8; color: var(--text-muted); font-weight: 300; margin-bottom: 2rem; }
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 2rem; }
+  .service-card { padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+  .service-card .s-title { font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--seafoam-dark); }
+  .service-card .s-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+  .consulting-note { font-size: 13px; color: var(--text-muted); font-weight: 300; line-height: 1.7; padding: 1rem 1.25rem; background: var(--seafoam-light); border-radius: 10px; border-left: 3px solid var(--seafoam); }
+
+  .collab-banner { padding: 2rem; background: var(--seafoam-light); border-radius: 16px; border: 1px solid var(--seafoam-mid); }
+  .collab-banner h3 { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.75rem; color: var(--text); }
+  .collab-banner p { font-size: 14px; color: var(--text-muted); line-height: 1.8; font-weight: 300; }
+  .collab-banner a { color: var(--seafoam-dark); text-decoration: none; font-weight: 500; }
+  .collab-banner a:hover { text-decoration: underline; }
+
+  footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 2.5rem 2rem; margin-top: 2rem; }
+  .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  footer .f-name { font-family: 'DM Serif Display', serif; font-size: 20px; color: white; margin-bottom: 4px; }
   footer .f-title { font-size: 13px; font-weight: 300; }
   footer .f-links { display: flex; flex-direction: column; gap: 6px; text-align: right; }
-  footer .f-links a {
-    font-size: 13px;
-    color: var(--seafoam-mid);
-    text-decoration: none;
-  }
+  footer .f-links a { font-size: 13px; color: var(--seafoam-mid); text-decoration: none; }
   footer .f-links a:hover { color: var(--seafoam); }
 
   @media (max-width: 680px) {
@@ -324,7 +137,8 @@
     .hero h1 { font-size: 38px; }
     .hero-right { order: -1; }
     .headshot-wrap { aspect-ratio: 1/1; max-width: 200px; }
-    .research-grid, .awards-grid, .community-grid { grid-template-columns: 1fr; }
+    .research-grid, .awards-grid, .community-grid, .services-grid, .methods-grid { grid-template-columns: 1fr; }
+    .edu-item { grid-template-columns: 1fr; gap: 0.25rem; }
   }
 </style>
 </head>
@@ -335,8 +149,11 @@
     <a href="#" class="nav-name">Tanajia Moye-Green</a>
     <div class="nav-links">
       <a href="#research">Research</a>
+      <a href="#education">Education</a>
       <a href="#awards">Awards</a>
-      <a href="#media">Press & Media</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#media">Press</a>
+      <a href="#consulting">Consulting</a>
       <a href="#community">Community</a>
     </div>
   </div>
@@ -345,9 +162,9 @@
 <section class="hero">
   <div class="hero-left">
     <span class="hero-tag">PhD Student · Stanford Sociology</span>
-    <h1>Sociologist.<br><em>Public intellectual.</em><br>Builder.</h1>
+    <h1>Sociologist.<br><em>Public-facing scholar.</em><br>Builder.</h1>
     <p class="hero-bio">
-      I study the economic impact of incarceration on families, with a focus on how loved ones — particularly partners — navigate financial strain, fines and fees, and the broader challenges of supporting justice-impacted individuals. I'm also interested in how the consequences of maternal vs. paternal incarceration differ in shaping child and family well-being. Knight-Hennessy Scholar, NSF Graduate Research Fellow, Fulbright Scholar, and believer that sociology belongs to everyone.
+      I study the economic impact of incarceration on families, with a focus on how loved ones — particularly partners — navigate financial strain, fines and fees, and the broader challenges of supporting justice-impacted individuals. I'm also interested in how the consequences of maternal vs. paternal incarceration differ in shaping child and family well-being. I am a mixed-methods sociologist with a current emphasis on quantitative methods — a reflection of both my training and my disability, which I name openly as part of who I am as a scholar. I believe deeply in the importance of being accountable to and engaged within our local communities, not just the academy. A proud Floridian committed to the critical work being done in and for the South. Knight-Hennessy Scholar, NSF Graduate Research Fellow, and Fulbright Scholar.
     </p>
     <div class="hero-links">
       <a href="mailto:tmgreen@stanford.edu" class="btn-primary">CV Available Upon Request</a>
@@ -357,9 +174,7 @@
   </div>
   <div class="hero-right">
     <!-- ============================================
-         HEADSHOT: Upload your photo to the GitHub repo,
-         then replace YOUR-PHOTO-FILENAME.jpg below
-         with your actual filename e.g. headshot.jpg
+         HEADSHOT: Change IMG_0243.jpeg to your filename
          ============================================ -->
     <div class="headshot-wrap">
       <img src="IMG_0243.jpeg" alt="Tanajia Moye-Green"
@@ -419,6 +234,102 @@
 
 <div class="divider"></div>
 
+<section class="section" id="interests">
+  <div class="section-header">
+    <span class="section-label">Research Interests</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="interests-wrap">
+    <span class="interest-tag">Crime, Law & Deviance</span>
+    <span class="interest-tag">Mass Incarceration</span>
+    <span class="interest-tag">Social Stratification</span>
+    <span class="interest-tag">Race & Ethnicity</span>
+    <span class="interest-tag">Intersectionality</span>
+    <span class="interest-tag">Disability</span>
+    <span class="interest-tag">Family</span>
+    <span class="interest-tag">Gender</span>
+    <span class="interest-tag">Fines & Fees</span>
+    <span class="interest-tag">Inequality & Poverty</span>
+    <span class="interest-tag">Policy Evaluation</span>
+    <span class="interest-tag">Mixed Methods</span>
+    <span class="interest-tag">Epistemology & Knowledge Production</span>
+    <span class="interest-tag">Public Sociology</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="methods">
+  <div class="section-header">
+    <span class="section-label">Methods & Data Skills</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="methods-grid">
+    <div class="method-card">
+      <div class="m-title">Latent Class Analysis (LCA)</div>
+      <div class="m-desc">Including BCH correction for distal outcomes. Used to identify heterogeneous subgroups in economic survival strategies among mothers with incarcerated partners.</div>
+    </div>
+    <div class="method-card">
+      <div class="m-title">Two-Way Fixed Effects Panel Models</div>
+      <div class="m-desc">County-year panel designs controlling for unobserved heterogeneity across units and time. Applied to Vera Institute data (2009–2019) examining racialized spillover effects of incarceration.</div>
+    </div>
+    <div class="method-card">
+      <div class="m-title">Causal Inference & Quasi-Experimental Design</div>
+      <div class="m-desc">Transition-based quasi-experimental designs and propensity score matching for robustness. Experienced in designing studies that approximate causal claims with observational data.</div>
+    </div>
+    <div class="method-card">
+      <div class="m-title">Multinomial Regression</div>
+      <div class="m-desc">With clustered standard errors for nested and grouped data structures. Used alongside LCA to examine predictors of class membership and economic outcomes.</div>
+    </div>
+    <div class="method-card">
+      <div class="m-title">Administrative Data & Web Scraping</div>
+      <div class="m-desc">Large-scale PDF scraping and coding of court records and government documents in R. Undergraduate honors thesis examined group threat and punitiveness using scraped and merged state-level datasets.</div>
+    </div>
+    <div class="method-card">
+      <div class="m-title">Survey & Secondary Data Analysis</div>
+      <div class="m-desc">Experienced with FFCWS, Vera Institute administrative court data, and national secondary datasets. Proficient in R for data cleaning, merging, analysis, and visualization.</div>
+    </div>
+  </div>
+  <div class="methods-note">I am a mixed-methods sociologist with deep quantitative training. My current research program emphasizes quantitative secondary data designs — a deliberate methodological choice informed in part by my disability. I am always interested in methodological questions and welcome conversations about research design.</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="education">
+  <div class="section-header">
+    <span class="section-label">Education</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="edu-list">
+    <div class="edu-item">
+      <div class="edu-year">2024 — present</div>
+      <div>
+        <div class="edu-degree">PhD, Sociology</div>
+        <div class="edu-school">Stanford University</div>
+        <div class="edu-note">Knight-Hennessy Scholar · NSF GRFP Fellow · EDGE Fellow · Advancing to candidacy Fall 2026</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2023 — 2024</div>
+      <div>
+        <div class="edu-degree">MSc, Criminal Justice and Penal Change</div>
+        <div class="edu-school">University of Strathclyde, Glasgow</div>
+        <div class="edu-note">Graduated with Distinction · Fulbright Postgraduate Awardee · Thesis: legitimacy of fines and fees in Florida</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2019 — 2023</div>
+      <div>
+        <div class="edu-degree">BA, Sociology and Anthropology, magna cum laude</div>
+        <div class="edu-school">Washington and Lee University</div>
+        <div class="edu-note">Minors: Data Science & Poverty Studies · Emory Kimbrough Jr. Prize · Honors thesis: group threat and state-level punitiveness</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <section class="section" id="awards">
   <div class="section-header">
     <span class="section-label">Awards & Fellowships</span>
@@ -436,6 +347,11 @@
       <div class="a-year">2024</div>
     </div>
     <div class="award-item">
+      <div class="a-name">EDGE Fellowship</div>
+      <div class="a-org">Stanford University</div>
+      <div class="a-year">2024</div>
+    </div>
+    <div class="award-item">
       <div class="a-name">Fulbright Postgraduate Award</div>
       <div class="a-org">US-UK Fulbright Commission</div>
       <div class="a-year">2023</div>
@@ -446,14 +362,84 @@
       <div class="a-year">2022</div>
     </div>
     <div class="award-item">
-      <div class="a-name">EDGE Fellowship</div>
-      <div class="a-org">Stanford University</div>
-      <div class="a-year">2024</div>
-    </div>
-    <div class="award-item">
       <div class="a-name">Rhodes Scholarship Finalist</div>
       <div class="a-org">Rhodes Trust</div>
       <div class="a-year">2022</div>
+    </div>
+    <div class="award-item">
+      <div class="a-name">PPIA Fellow</div>
+      <div class="a-org">Princeton University</div>
+      <div class="a-year">2022</div>
+    </div>
+    <div class="award-item">
+      <div class="a-name">Critical Language Scholarship</div>
+      <div class="a-org">US Department of State</div>
+      <div class="a-year">2021</div>
+    </div>
+    <div class="award-item">
+      <div class="a-name">Questbridge Scholar</div>
+      <div class="a-org">QuestBridge</div>
+      <div class="a-year">2019</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="conferences">
+  <div class="section-header">
+    <span class="section-label">Conferences & Talks</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="conf-list">
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">RC28 Summer Meeting — New York University</div>
+        <div class="conf-sub">Oral presentation: "Relationship Instability and Income Packaging: How Partner Incarceration Reshapes Economic Survival Strategies" — 2026</div>
+      </div>
+      <span class="conf-tag">Oral</span>
+    </div>
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">Law & Society Association — San Francisco</div>
+        <div class="conf-sub">Two accepted presentations including "Safety and the State" roundtable and fines & fees paper — 2026</div>
+      </div>
+      <span class="conf-tag">Conference</span>
+    </div>
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">Society for the Study of Social Problems</div>
+        <div class="conf-sub">Two accepted presentations: income packaging paper and fines & fees paper — 2026</div>
+      </div>
+      <span class="conf-tag">Conference</span>
+    </div>
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">American Sociological Association</div>
+        <div class="conf-sub">IPM Roundtable presentation + Roundtable Organizer, Sociology of Law Section (31 papers) — 2026</div>
+      </div>
+      <span class="conf-tag">Conference</span>
+    </div>
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">Carceral Political Economy Conference — New York</div>
+        <div class="conf-sub">"The Racialized Spillover Effects of Mass Incarceration for Women" — 2026</div>
+      </div>
+      <span class="conf-tag">Conference</span>
+    </div>
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">Vera Institute of Justice — IIP Research Symposium</div>
+        <div class="conf-sub">"The Racialized Spillover Effects of Mass Incarceration for Women" — 2025</div>
+      </div>
+      <span class="conf-tag">Invited</span>
+    </div>
+    <div class="conf-item">
+      <div>
+        <div class="conf-title">Knight-Hennessy Scholars Curiosity Corner — Stanford</div>
+        <div class="conf-sub">Invited talk on criminal justice research — 2026</div>
+      </div>
+      <span class="conf-tag">Invited</span>
     </div>
   </div>
 </section>
@@ -462,7 +448,7 @@
 
 <section class="section" id="media">
   <div class="section-header">
-    <span class="section-label">Press & Public Work</span>
+    <span class="section-label">Press & Content</span>
     <div class="section-line"></div>
   </div>
   <div class="media-list">
@@ -475,33 +461,63 @@
     </div>
     <div class="media-item">
       <div>
-        <div class="mi-title">Tanajia Talks a Lot</div>
-        <div class="mi-sub">Public sociology podcast for and about marginalized communities</div>
+        <div class="mi-title">Tanajia Talks a Lot — Podcast</div>
+        <div class="mi-sub">A public sociology podcast making research and ideas accessible to people from marginalized communities — coming soon</div>
       </div>
-      <span class="mi-tag">Podcast</span>
+      <span class="mi-tag">Upcoming</span>
     </div>
     <div class="media-item">
       <div>
-        <div class="mi-title">RC28 Summer Meeting — NYU</div>
-        <div class="mi-sub">Oral presentation: Relationship Instability and Income Packaging — 2026</div>
+        <div class="mi-title">Content Creation</div>
+        <div class="mi-sub">Short-form and long-form public sociology content across platforms — in development</div>
       </div>
-      <span class="mi-tag">Conference</span>
+      <span class="mi-tag">Upcoming</span>
     </div>
     <div class="media-item">
       <div>
-        <div class="mi-title">Law & Society Association</div>
-        <div class="mi-sub">Two accepted presentations — San Francisco, 2026</div>
+        <div class="mi-title">LinkedIn</div>
+        <div class="mi-sub">Building in public — research, civic engagement, and the life of a public-facing scholar</div>
       </div>
-      <span class="mi-tag">Conference</span>
-    </div>
-    <div class="media-item">
-      <div>
-        <div class="mi-title">American Sociological Association</div>
-        <div class="mi-sub">IPM Roundtable + Roundtable Organizer, Sociology of Law — 2026</div>
-      </div>
-      <span class="mi-tag">Conference</span>
+      <span class="mi-tag">Active</span>
     </div>
   </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="consulting">
+  <div class="section-header">
+    <span class="section-label">Consulting & Research Services</span>
+    <div class="section-line"></div>
+  </div>
+  <p class="consulting-intro">Rigorous quantitative analysis, rooted in understanding and depicting people's lived experiences — for organizations working at the intersection of justice, policy, and inequality. I help organizations move from messy data to rigorous, actionable findings without losing sight of the communities those findings are about.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="s-title">Quantitative Data Analysis</div>
+      <div class="s-desc">Administrative data cleaning, statistical modeling, regression analysis, program evaluation, and robustness checks. Proficient in R; experience with large-scale government datasets.</div>
+    </div>
+    <div class="service-card">
+      <div class="s-title">Research Design & Methods</div>
+      <div class="s-desc">Study design, causal inference strategy, survey design, IRB navigation, and data access applications including secure data enclaves.</div>
+    </div>
+    <div class="service-card">
+      <div class="s-title">Data Visualization & Reporting</div>
+      <div class="s-desc">Translating complex findings into clear, compelling visualizations and policy-ready reports for both technical and public audiences.</div>
+    </div>
+    <div class="service-card">
+      <div class="s-title">Equity-Centered Research Design</div>
+      <div class="s-desc">Designing studies that center communities most affected — including question framing, data collection ethics, and community-informed interpretation.</div>
+    </div>
+    <div class="service-card">
+      <div class="s-title">Expert Research Support</div>
+      <div class="s-desc">Quantitative support for legal teams and public defenders including RJA work and sentencing disparity analysis. Capacity building for non-technical staff.</div>
+    </div>
+    <div class="service-card">
+      <div class="s-title">Mentorship — Always Free</div>
+      <div class="s-desc">For FGLI students and scholars from justice-impacted communities. College and grad school applications, research development, fellowship applications, and navigating academia.</div>
+    </div>
+  </div>
+  <div class="consulting-note">Rates vary based on project scope, organization budget, and mission alignment. I prioritize organizations doing frontline justice work and am happy to discuss sliding scale options. To inquire, reach out at <a href="mailto:tmgreen@stanford.edu" style="color: var(--seafoam-dark);">tmgreen@stanford.edu</a></div>
 </section>
 
 <div class="divider"></div>
@@ -511,10 +527,10 @@
     <span class="section-label">Teaching & Community</span>
     <div class="section-line"></div>
   </div>
-  <div class="community-grid">
+  <div class="community-grid" style="margin-bottom: 2.5rem;">
     <div class="community-card">
       <div class="c-title">Stanford Jail & Prison Education Project</div>
-      <div class="c-desc">Teaching sociology inside carceral institutions — because education is a right, not a privilege reserved for those who stayed on the outside.</div>
+      <div class="c-desc">Teaching sociology inside carceral institutions — because education is a right, not a privilege reserved for those who stayed on the outside. Also serving as Jail Coordinator.</div>
       <div class="c-date">2024 — present</div>
     </div>
     <div class="community-card">
@@ -522,6 +538,10 @@
       <div class="c-desc">Junior Counselor mentoring children with justice-impacted parents. Community is wherever you are — and so is the work.</div>
       <div class="c-date">2025 — present</div>
     </div>
+  </div>
+  <div class="collab-banner">
+    <h3>Open to Collaboration</h3>
+    <p>I am a proud Floridian committed to the critical work being done in and for the South — and I welcome collaborations from anyone who is genuinely interested in questions of justice, inequality, and the communities most affected by both. If something here resonates with you, please reach out at <a href="mailto:tmgreen@stanford.edu">tmgreen@stanford.edu</a></p>
   </div>
 </section>
 
